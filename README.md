@@ -1,7 +1,7 @@
 # Projeto_Camadas-Arquitetura
 Objetivo da atividade: identificar as atribuições/responsabilidades de cada camada da arquitetura.
 
-# Atividade Prática — Arquitetura em Camadas
+# Atividade Prática: Arquitetura em Camadas
  
 Projeto desenvolvido como atividade prática para demonstrar o funcionamento da arquitetura em camadas, adicionando o campo **telefone** ao sistema de usuários de ponta a ponta.
  
