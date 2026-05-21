@@ -51,18 +51,20 @@ def criar_usuario():
         
         nome = dados.get('nome')
         email = dados.get('email')
+        telefone = dados.get('telefone')
         
         if not nome or not email:
             return jsonify({"erro": "Nome e email são obrigatórios"}), 400
         
         # Chamar camada de serviço
-        usuario = servico_usuario.criar_usuario(nome, email)
+        usuario = servico_usuario.criar_usuario(nome, email, telefone)
         
         # Retornar resposta formatada
         return jsonify({
             "id": usuario.id,
             "nome": usuario.nome,
             "email": usuario.email,
+            "telefone": usuario.telefone,
             "ativo": usuario.ativo
         }), 201
         
@@ -97,6 +99,7 @@ def obter_usuario(usuario_id):
             "id": usuario.id,
             "nome": usuario.nome,
             "email": usuario.email,
+            "telefone": usuario.telefone,
             "ativo": usuario.ativo
         }), 200
         
@@ -123,6 +126,7 @@ def listar_usuarios():
                     "id": u.id,
                     "nome": u.nome,
                     "email": u.email,
+                    "telefone": u.telefone,
                     "ativo": u.ativo
                 }
                 for u in usuarios

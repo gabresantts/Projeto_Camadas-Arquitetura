@@ -40,6 +40,7 @@ class Usuario:
     email: str
     id: Optional[int] = None
     ativo: bool = True
+    telefone: Optional[str] = None
     
     def __post_init__(self):
         """

@@ -81,6 +81,7 @@ def inicializar_banco() -> None:
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 nome TEXT NOT NULL,
                 email TEXT NOT NULL UNIQUE,
+                telefone TEXT,
                 ativo INTEGER NOT NULL DEFAULT 1,
                 criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 atualizado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
