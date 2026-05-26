@@ -18,7 +18,8 @@ from typing import Optional, List
 from dominio.usuario import Usuario
 from dados.db import obter_conexao
 
-
+# PRINCIPIO SRP: Esta classe tem a responsabilidade única de persistência (acesso ao banco de dados).
+# Ela não conhece regras de negócio nem lógica de interface, focando apenas em operações CRUD com SQL.
 class RepositorioUsuario:
     """
     Repositório responsável pela persistência de usuários.
